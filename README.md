@@ -1,16 +1,57 @@
-# React + Vite
+# 🔍 OSINT Flow Navigator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**OSINT Flow Navigator** es una aplicación web interactiva diseñada para asistir a investigadores OSINT (Open-Source Intelligence), periodistas, y analistas de ciberseguridad en sus procesos de investigación. 
 
-Currently, two official plugins are available:
+La herramienta proporciona una interfaz limpia, profesional y libre de fricciones que guía a los usuarios a través de flujos de trabajo estructurados dependiendo del dato inicial que se posea (Ej: Correo, IP, Teléfono, Username, etc.), pivotando hacia herramientas específicas, sin recolectar ni almacenar información personal en servidores externos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Acceso Rápido
+**[🌐 Abrir OSINT Flow Navigator](https://omrpps.github.io/osint-flow-navigator/)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Características Principales
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Flujos de Trabajo Guiados:** Más de 20 categorías de investigación (Emails, Teléfonos, Redes Sociales, Dark Web, Criptomonedas, etc.).
+- **Catálogo de Herramientas:** Acceso organizado a más de 300 herramientas OSINT curadas y verificadas.
+- **Asistente de Procesamiento:** Un asistente paso a paso para recomendar herramientas según la evidencia tecnológica.
+- **Seguridad y OPSEC:** Sección dedicada a "Security in a Box" y tácticas de seguridad operacional para mantener el anonimato y la seguridad durante las investigaciones.
+- **Totalmente Client-Side:** Todo el código se ejecuta en tu navegador. Tus datos e investigaciones nunca salen de tu ordenador.
+
+## 💻 Desarrollo Local
+
+Este proyecto está construido con React y Vite.
+
+### Requisitos Previos
+- Node.js versión 18+ o superior.
+
+### Instalación
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/omrpps/osint-flow-navigator.git
+   cd osint-flow-navigator
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Inicia el servidor de desarrollo local:
+   ```bash
+   npm run dev
+   ```
+
+## 🌍 Despliegue en Producción (GitHub Pages)
+
+Para actualizar la web en vivo después de hacer cambios en el código local:
+1. Asegúrate de haber guardado tus cambios (`git commit`).
+2. Ejecuta el comando de despliegue:
+   ```bash
+   npm run deploy
+   ```
+*(Este comando compilará la aplicación y la subirá automáticamente a la rama `gh-pages`)*.
+
+---
+*Si tu carpeta está alojada en Google Drive o OneDrive de forma nativa localmente, asegúrate de pausar la sincronización en la nube antes de instalar NPM para evitar errores 404/locks.*

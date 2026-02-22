@@ -1,38 +1,26 @@
-# OSINT Flow Navigator
+# ⚠️ INFORMACIÓN IMPORTANTE DEL PROYECTO
 
-## 🚀 Instalación y Ejecución
+## Problemas de Sincronización en la Nube (Google Drive / OneDrive)
 
-⚠️ **IMPORTANTE: Problemas con Google Drive / OneDrive**
-Este proyecto se encuentra en una carpeta sincronizada (`D:/Mi unidad/...`). Esto causa bloqueos en los archivos y errores al instalar dependencias con `npm install`.
+Este proyecto puede experimentar errores graves durante la ejecución de comandos como `npm install` o `npm run dev` si la carpeta del proyecto está siendo **sincronizada en tiempo real** por un cliente de nube como Google Drive, OneDrive o Dropbox.
 
-### ✅ Pasos para ejecutar el proyecto correctamente:
+Los clientes de sincronización en la nube a menudo "bloquean" los archivos de la pesada carpeta `node_modules` y `.git`, lo que causa errores de lectura/escritura (EPERM, EBUSY) en Node.js, Vite y Git.
 
-1.  **Mueve la carpeta del proyecto** fuera de Google Drive a una ubicación local (ej: `C:/Proyectos/FlujoOsint` o `Escritorio/FlujoOsint`).
-2.  Abre una terminal en la nueva carpeta.
-3.  Ejecuta los siguientes comandos:
+### 🛠️ Solución Recomendada:
 
-```bash
-# 1. Instalar dependencias base
-npm install
+1. **Mueve la carpeta del proyecto** fuera de cualquier directorio administrado por Google Drive o OneDrive a una ubicación completamente local y nativa (ej: `C:/Proyectos/FlujoOsint`).
+2. Una vez movida, abre la terminal allí y vuelve a ejecutar:
+   ```bash
+   npm install
+   npm run dev
+   ```
 
-# 2. Instalar dependencias de UI y navegación (si fallaron antes)
-npm install lucide-react react-router-dom clsx tailwind-merge class-variance-authority zustand @radix-ui/react-slot
+## Despliegue Automatizado (gh-pages)
 
-# 3. Iniciar el servidor de desarrollo
-npm run dev
-```
+El proyecto está actualmente integrado mediante flujos de **GitHub Pages**. 
 
-### 🛠️ Tecnologías
-- **Vite + React**: Framework principal.
-- **Tailwind CSS**: Estilos modernos.
-- **Zustand**: Gestión de estado.
-- **Lucide React**: Iconografía.
+No uses la herramienta de MCP (Model Context Protocol) ni servicios complejos para alojarlo. Tu web funciona 100% de manera gratuita con el uso nativo de HashRouter.
 
-## 📄 Características Implementadas
-- **Dashboard**: Vista general con tarjetas de acceso rápido.
-- **Motor de Flujos**: Sistema paso a paso para investigaciones.
-- **Input Inteligente**: Detecta Emails, IPs, etc. en la barra superior.
-- **Modo Oscuro/Claro**: Preparado (sistema base en `index.css`).
-
-## ⚠️ Known Issues
-- `npm install` falla si la carpeta está sincronizándose en tiempo real. Pausa la sincronización o mueve la carpeta.
+- Si haces modificaciones al código fuente de la carpeta `src/`, debes guardarlas con `git add .` y `git commit`.
+- Tras esto, simplemente ejecuta **`npm run deploy`** en la terminal.
+- El proyecto se reconstruirá en una carpeta `dist/` temporal que subirá automáticamente a la rama virtual de `gh-pages`, actualizando la página web en directo.
