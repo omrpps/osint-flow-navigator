@@ -1,36 +1,27 @@
 import React, { useState } from 'react';
-import { guideData } from '../data/guide_data';
+import { opsecGuideData } from '../data/opsec_guide_data';
 import {
-    CheckCircle2,
+    Shield,
     ChevronRight,
     RefreshCcw,
     ArrowLeft,
     ExternalLink,
     HelpCircle
 } from 'lucide-react';
-import { dataModel } from '../data/data_model';
-import { social } from '../data/categories/social';
-import { physical } from '../data/categories/physical';
-import { factcheck } from '../data/categories/factcheck';
-import { ip_domain } from '../data/categories/ip_domain';
 import { opsec } from '../data/categories/opsec';
-import { email } from '../data/categories/email';
-import { phone } from '../data/categories/phone';
-import { username } from '../data/categories/username';
 
-// Combine all tools to search full DB
-const allCategories = [social, physical, factcheck, ip_domain, opsec, email, phone, username, dataModel];
-const allTools = allCategories.flatMap(cat => cat.tools || []);
+// Grab tools only from opsec category
+const allTools = opsec.tools || [];
 
-export default function VerificationGuidePage() {
+export default function OpsecGuidePage() {
     const [history, setHistory] = useState(['start']);
     const [currentStepId, setCurrentStepId] = useState('start');
 
     // Check if the current id is a question or a final result
-    const isResult = !!guideData.results[currentStepId];
+    const isResult = !!opsecGuideData.results[currentStepId];
     const currentNode = isResult
-        ? guideData.results[currentStepId]
-        : guideData.questions[currentStepId];
+        ? opsecGuideData.results[currentStepId]
+        : opsecGuideData.questions[currentStepId];
 
     const handleOptionSelect = (nextId) => {
         setHistory(prev => [...prev, nextId]);
@@ -60,8 +51,8 @@ export default function VerificationGuidePage() {
         <div className="flex flex-col h-full bg-background">
             <header className="flex h-14 items-center justify-between border-b bg-muted/40 px-6 shrink-0">
                 <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary" />
-                    <h1 className="text-lg font-semibold">Asistente de Verificación</h1>
+                    <Shield className="h-5 w-5 text-primary" />
+                    <h1 className="text-lg font-semibold">Asistente de Preparación (OPSEC)</h1>
                 </div>
                 {history.length > 1 && (
                     <button
@@ -92,7 +83,7 @@ export default function VerificationGuidePage() {
                             </div>
                         ) : (
                             <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-green-500/10 mb-2">
-                                <CheckCircle2 className="h-8 w-8 text-green-500" />
+                                <Shield className="h-8 w-8 text-green-500" />
                             </div>
                         )}
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight">

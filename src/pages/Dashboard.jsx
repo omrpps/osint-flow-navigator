@@ -117,18 +117,18 @@ export default function Dashboard() {
                         </div>
                     </div>
 
-                    <div className="w-full max-w-xl flex items-center space-x-2 relative group">
-                        <div className="relative flex-1">
+                    <div className="w-full max-w-xl flex flex-col sm:flex-row items-center gap-3 relative group">
+                        <div className="relative flex-1 w-full">
                             <Search className="absolute left-3 top-3.5 h-5 w-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
                             <Input
                                 placeholder="Ej: target@email.com, +34600..., 192.168.1.1, 0xWallet..."
-                                className="pl-10 h-14 text-lg shadow-lg border-muted-foreground/20 focus-visible:ring-primary/50"
+                                className="pl-10 h-14 text-lg shadow-lg border-muted-foreground/20 focus-visible:ring-primary/50 w-full"
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 onKeyDown={handleKeyPress}
                             />
                         </div>
-                        <Button size="lg" className="h-14 px-8 shadow-lg text-lg font-semibold" onClick={handleAnalyze}>
+                        <Button size="lg" className="h-14 w-full sm:w-auto px-8 shadow-lg text-lg font-semibold" onClick={handleAnalyze}>
                             Analizar <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
                     </div>

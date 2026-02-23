@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '../components/ui/card';
-import { Search, ExternalLink, Filter, Star } from 'lucide-react';
+import { Search, ExternalLink, Filter, Star, Shield } from 'lucide-react';
 import useAppStore from '../stores/useStore';
 import { cn } from '../lib/utils';
 
@@ -83,11 +83,12 @@ export default function ToolsPage() {
                                 </span>
                                 {tool.opsec_level && (
                                     <span className={cn(
-                                        "px-2 py-1 rounded-md font-medium border",
-                                        tool.opsec_level.includes('Safe') ? "bg-green-500/10 text-green-600 border-green-200" :
+                                        "px-2 py-1 rounded-md font-medium border flex items-center gap-1",
+                                        tool.opsec_level.includes('Safe') ? "text-muted-foreground border-transparent bg-muted/30" :
                                             tool.opsec_level.includes('Risk') ? "bg-red-500/10 text-red-600 border-red-200" :
                                                 "bg-yellow-500/10 text-yellow-600 border-yellow-200"
                                     )}>
+                                        {tool.opsec_level.includes('Safe') ? <Shield className="h-3 w-3" /> : ''}
                                         {tool.opsec_level}
                                     </span>
                                 )}

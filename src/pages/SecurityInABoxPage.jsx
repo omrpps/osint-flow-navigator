@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Smartphone, Key, Wifi, Globe, FileKey, ChevronDown, ChevronUp, AlertCircle, EyeOff, Lock } from 'lucide-react';
+import { Shield, Smartphone, Key, Wifi, Globe, FileKey, ChevronDown, ChevronUp, AlertCircle, EyeOff, Lock, ExternalLink } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 export default function SecurityInABoxPage() {
@@ -133,11 +133,13 @@ export default function SecurityInABoxPage() {
                             <Shield className="h-full w-full text-primary" />
                         </div>
                         <div className="relative">
-                            <h2 className="text-2xl font-bold tracking-tight mb-2">Procedimientos de Seguridad Integral</h2>
-                            <p className="text-muted-foreground flex items-center gap-2 max-w-2xl">
-                                <AlertCircle className="h-4 w-4 shrink-0" />
-                                Esta guía es una adaptación de <a href="https://securityinabox.org/en/" target="_blank" rel="noreferrer" className="text-primary hover:underline">Security in a Box</a> de Tactical Tech y Front Line Defenders. Aplica estos principios para proteger tus equipos, comunicaciones e investigaciones.
-                            </p>
+                            <h2 className="text-2xl font-bold tracking-tight mb-4">Procedimientos de Seguridad Integral</h2>
+                            <div className="flex flex-col sm:flex-row sm:items-start gap-3 max-w-2xl text-muted-foreground bg-primary/5 p-4 rounded-lg border border-primary/20">
+                                <AlertCircle className="h-5 w-5 shrink-0 text-primary mt-0.5" />
+                                <p className="leading-relaxed">
+                                    Esta guía es una adaptación de <a href="https://securityinabox.org/en/" target="_blank" rel="noreferrer" className="text-primary font-medium hover:underline inline-flex items-center gap-1">Security in a Box <ExternalLink className="h-3 w-3" /></a> de Tactical Tech y Front Line Defenders. Aplica estos principios para proteger tus equipos, comunicaciones e investigaciones.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
