@@ -15,9 +15,7 @@ export const ip_domain = {
         { id: 'builtwith', name: 'BuiltWith', url: 'https://builtwith.com/', description: 'Identifica las tecnologías que usa una web.', usage: 'Descubre CMS, analytics y plugins instalados.', category: 'ip_domain', free: true },
         { id: 'whois_domain', name: 'Who.is', url: 'https://who.is/', description: 'Consulta de registro de dominios.', usage: 'Verifica fecha de creación y registrador.', category: 'ip_domain', free: true },
 
-        // Start.me Tools
-        { id: 'wolfram_alpha', name: 'Wolfram Alpha', url: 'http://wolframalpha.com', description: 'Motor de conocimiento computacional.', category: 'ip_domain', free: true },
-        { id: 'whois_startme', name: 'WhoIs', url: 'http://whois.com', description: 'Consulta WhoIs de dominios.', category: 'ip_domain', free: true }
+
     ],
     flows: [
         {

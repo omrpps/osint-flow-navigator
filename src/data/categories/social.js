@@ -31,24 +31,8 @@ export const social = {
         { id: 'botometer', name: 'Botometer', url: 'https://botometer.osome.iu.edu/', description: 'Analiza si una cuenta es un bot.', usage: 'Chequea la probabilidad de automatización.', category: 'social', free: true },
         { id: 'onemilliontweetmap', name: 'OneMillionTweetMap', url: 'https://onemilliontweetmap.com/', description: 'Mapa de calor de tweets en tiempo real.', category: 'social', free: true },
         { id: 'socialblade_twitter', name: 'SocialBlade (X)', url: 'https://socialblade.com/twitter/', description: 'Estadísticas de crecimiento de seguidores.', category: 'social', free: true },
-        
-        // Start.me Tools
-        { id: 'twitter_search_lists', name: 'Google search Twitter lists', url: 'https://www.google.co.uk/search?q=site%3Atwitter.com%2F*%2Flists%2F...', description: 'Busca en listas de Twitter.', usage: 'Usa Dorks para buscar dentro de listas.', category: 'social', free: true },
-        { id: 'list_copy', name: 'List Copy', url: 'http://projects.noahliebman.net/listcopy/index.php', description: 'Copia listas de X/Twitter.', category: 'social', free: true },
-        { id: 'dl_twitter_videos', name: 'Download Twitter Videos', url: 'http://www.downloadtwittervideo.com/', description: 'Descarga videos de X/Twitter.', category: 'social', free: true },
-        { id: 'twxplorer', name: 'twXplorer', url: 'https://twxplorer.knightlab.com/', description: 'Explora términos de búsqueda en X/Twitter.', category: 'social', free: true },
-        { id: 'tweetbeaver', name: 'TweetBeaver', url: 'http://tweetbeaver.com/', description: 'Herramientas de análisis y descarga para Twitter.', category: 'social', free: true },
-        { id: 'foller_me', name: 'Foller Me', url: 'http://foller.me/', description: 'Analítica de perfiles de Twitter.', category: 'social', free: true },
-        { id: 'follower_wonk', name: 'Follower Wonk', url: 'https://moz.com/followerwonk/', description: 'Busca en biografías de Twitter.', category: 'social', free: false },
-        { id: 'fb_search_tool', name: 'IntelTechniques FB search', url: 'https://inteltechniques.com/osint/menu.facebook.html', description: 'Herramientas de búsqueda para Facebook.', category: 'social', free: true },
-        { id: 'fb_livemap', name: 'FB Livemap', url: 'https://www.facebook.com/livemap/', description: 'Mapa en vivo de Facebook.', category: 'social', free: true },
-        { id: 'fb_graph_shortcuts', name: 'Facebook Graph Shortcuts', url: 'http://graph.tips/', description: 'Atajos para búsqueda Graph en FB.', category: 'social', free: true },
-        { id: 'peoplefindthor', name: 'peoplefindThor', url: 'http://peoplefindthor.dk/', description: 'Busca personas en Facebook.', category: 'social', free: true },
-        { id: 'picodash', name: 'Picodash', url: 'https://www.picodash.com/', description: 'Herramienta de búsqueda para Instagram (de pago).', category: 'social', free: false },
-        { id: 'youtube_google_search', name: 'Google YouTube search', url: 'https://www.google.co.uk/search?dcr=0&q=site%3Ayoutube.com...', description: 'Dorks de Google para YouTube.', category: 'social', free: true },
-        { id: 'watch_frame_by_frame', name: 'Watch Frame by Frame', url: 'http://www.watchframebyframe.com/', description: 'Mira videos de YouTube frame a frame.', category: 'social', free: true },
-        { id: 'yt_geo_search', name: 'YT Geo Search', url: 'http://youtube.github.io/geo-search-tool/search.html', description: 'Búsqueda geolocalizada en YouTube.', category: 'social', free: true },
-        { id: 'deturl', name: 'Deturl', url: 'http://deturl.com/', description: 'Descarga videos de YouTube y otros.', category: 'social', free: true }
+
+
     ],
     flows: [
         {

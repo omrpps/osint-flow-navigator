@@ -36,22 +36,9 @@ export const physical = {
         { id: 'pic2map', name: 'Pic2Map', url: 'https://www.pic2map.com/', description: 'Visualiza fotos en el mapa usando EXIF.', usage: 'Sube fotos para ver dónde fueron tomadas.', category: 'physical', free: true },
         { id: 'shadowcalculator', name: 'ShadowCalculator', url: 'https://www.shadowcalculator.eu/', description: 'Calculadora de sombras alternativa.', usage: 'Verifica la hora y fecha basada en sombras.', category: 'physical', free: true },
 
-        // Start.me Tools
-        { id: 'live_atc', name: 'Live ATC', url: 'http://www.liveatc.net/', description: 'Escucha control de tráfico aéreo en vivo.', category: 'transport', free: true },
-        { id: 'maritime_connector', name: 'Maritime Connector', url: 'http://maritime-connector.com/ships/', description: 'Base de datos de barcos.', category: 'transport', free: true },
-        { id: 'global_gazzetteer', name: 'Global Gazzetteer', url: 'http://www.fallingrain.com/world/index.html', description: 'Directorio mundial de lugares.', category: 'physical', free: true },
-        { id: 'power_grid', name: 'Power Grid', url: 'https://nadoloni.com/power.html', description: 'Mapa de redes eléctricas.', category: 'physical', free: true },
-        { id: 'openrailwaymap', name: 'OpenRailwayMap', url: 'http://www.openrailwaymap.org/', description: 'Mapa de infraestructuras ferroviarias.', category: 'transport', free: true },
-        { id: 'openstreetmap', name: 'OpenStreetMap', url: 'http://www.openstreetmap.org/', description: 'Mapas libres y editables.', category: 'physical', free: true },
-        { id: 'map_convert', name: 'Map convert', url: 'http://andrew.hedges.name/experiments/convert_lat_long/', description: 'Convierte coordenadas de latitud/longitud.', category: 'physical', free: true },
-        { id: 'degree_decimal', name: 'Degree to Decimal Converter', url: 'http://www.onlineconversion.com/map_decimaldegrees.htm', description: 'Convierte grados a decimales.', category: 'physical', free: true },
-        { id: 'geonames', name: 'Geonames', url: 'http://www.geonames.org/', description: 'Base de datos geográfica.', category: 'physical', free: true },
-        { id: 'juxtapose', name: 'Juxtapose', url: 'http://juxtapose.knightlab.com/', description: 'Compara dos imágenes/mapas.', category: 'physical', free: true },
-        { id: 'nasa_fire', name: 'Active Fire Data | Earthdata', url: 'https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/active-fire-data', description: 'Datos de incendios activos de la NASA.', category: 'physical', free: true },
-        { id: 'bridge_database', name: 'Bridge Database Brueckenweb', url: 'https://www.brueckenweb.de/', description: 'Base de datos de puentes (en alemán).', category: 'physical', free: true },
-        { id: 'military_equipment', name: 'Military Equipment Recognition', url: 'http://www.armyrecognition.com/individual_page/world_military_equipment.html', description: 'Reconocimiento de equipo militar.', category: 'physical', free: true },
-        { id: 'uniform_insignia', name: 'Uniform Insignia', url: 'http://www.uniforminsignia.org/index.php/component/insigniasearch/?view=insigniasearch', description: 'Base de datos de insignias y uniformes.', category: 'physical', free: true },
-        { id: 'what3words', name: 'What3words', url: 'https://what3words.com/', description: 'Georreferenciación por palabras.', category: 'physical', free: true }
+        // Extra Utilities
+        { id: 'live_atc', name: 'Live ATC', url: 'https://www.liveatc.net/', description: 'Escucha control de tráfico aéreo en vivo.', usage: 'Útil contextualizando incidentes en aeropuertos.', category: 'transport', free: true },
+        { id: 'what3words', name: 'What3words', url: 'https://what3words.com/', description: 'Georreferenciación hiperprecisa por 3 palabras.', usage: 'Para ubicar localizaciones exactas de difícil acceso.', category: 'physical', free: true }
     ],
     flows: [
         {

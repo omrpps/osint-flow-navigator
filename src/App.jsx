@@ -11,6 +11,7 @@ import SettingsPage from './pages/SettingsPage';
 import SecurityInABoxPage from './pages/SecurityInABoxPage';
 import VerificationGuidePage from './pages/VerificationGuidePage';
 import OpsecGuidePage from './pages/OpsecGuidePage';
+import EvidencePage from './pages/EvidencePage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="security" element={<SecurityInABoxPage />} />
           <Route path="verification-guide" element={<VerificationGuidePage />} />
           <Route path="opsec-guide" element={<OpsecGuidePage />} />
+          <Route path="evidence" element={<EvidencePage />} />
           <Route path="settings" element={<SettingsPage />} />
         </Route>
       </Routes>

@@ -34,23 +34,7 @@ export const factcheck = {
         { id: 'ghostarchive', name: 'Ghost Archive', url: 'https://ghostarchive.org/', description: 'Alternativa robusta para archivar.', usage: 'Guarda instantáneas de sitios sin ejecutar scripts.', category: 'factcheck', free: true },
         { id: 'singlefile', name: 'SingleFile (Extension)', url: 'https://github.com/gildas-lormeau/SingleFile', description: 'Guarda una página completa como un solo archivo HTML.', usage: 'Ideal para guardar evidencia localmente con alta fidelidad.', category: 'factcheck', free: true },
 
-        // Start.me Tools
-        { id: 'rev_image_intel', name: 'Rev Image: Intelligence Techniques', url: 'https://inteltechniques.com/OSINT/reverse.image.html', description: 'Búsqueda inversa de imágenes (IntelTechniques).', category: 'factcheck', free: true },
-        { id: 'flip_a_picture', name: 'Flip a Picture', url: 'http://flipapicture.com/', description: 'Voltea una imagen para buscarla.', category: 'factcheck', free: true },
-        { id: 'metapicz', name: 'Metapicz', url: 'http://metapicz.com/#landing', description: 'Visor de metadatos de imágenes.', category: 'factcheck', free: true },
-        { id: 'jeffreys_exif', name: 'Jeffrey\'s EXIF', url: 'http://exif.regex.info/exif.cgi', description: 'Visor avanzado de EXIF.', category: 'factcheck', free: true },
-        { id: 'verexif', name: 'VerExif', url: 'http://www.verexif.com/en/', description: 'Ver y eliminar EXIF.', category: 'factcheck', free: true },
-        { id: 'exif_data_viewer', name: 'EXIF Data Viewer', url: 'http://exifdata.com/', description: 'Visor de datos EXIF.', category: 'factcheck', free: true },
-        { id: 'video_metadata_viewer', name: 'Video Metadata Viewer', url: 'http://www.get-metadata.com', description: 'Metadatos para archivos de video MP4, etc.', category: 'factcheck', free: true },
-        { id: 'archer_meta', name: 'Archer Meta', url: 'https://github.com/archerimpact/Meta', description: 'Herramienta de metadatos.', category: 'factcheck', free: true },
-        { id: 'imageforensic', name: 'Imageforensic', url: 'https://www.imageforensic.org/#work', description: 'Análisis forense de imágenes.', category: 'factcheck', free: true },
-        { id: 'izitru', name: 'izitru', url: 'http://www.izitru.com/', description: 'Verificación de imágenes.', category: 'factcheck', free: true },
-        { id: 'video_vault', name: 'Video Vault', url: 'https://www.bravenewtech.org/', description: 'Preservación de videos.', category: 'factcheck', free: true },
-        { id: 'keep_preservation', name: 'Keep', url: 'https://www.rightslab.org/keep', description: 'Herramienta de preservación.', category: 'factcheck', free: true },
-        { id: 'jing', name: 'Jing', url: 'https://www.techsmith.com/jing-tool.html', description: 'Captura de pantalla y video.', category: 'factcheck', free: true },
-        { id: 'jaksta', name: 'Jaksta', url: 'http://jaksta.com', description: 'Descarga de medios y grabaciones.', category: 'factcheck', free: true },
-        { id: 'cachedview', name: 'CachedView', url: 'http://cachedview.com/', description: 'Visualiza páginas en caché.', category: 'factcheck', free: true },
-        { id: 'firstdraftnewscheck', name: 'FirstDraftNewsCheck', url: 'https://chrome.google.com/webstore/detail/firstdraftnewscheck/...', description: 'Extensión de verificación de noticias.', category: 'factcheck', free: true }
+        // Preservación cubierta en la tab principal
     ],
     flows: [
         {

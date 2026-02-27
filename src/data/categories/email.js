@@ -4,25 +4,18 @@ export const email = {
     icon: 'Mail',
     description: 'Verificación, fugas y perfiles vinculados',
     tools: [
-        { id: 'emailhippo', name: 'EmailHippo', url: 'https://tools.emailhippo.com/', description: 'Verificación gratuita de direcciones de email.', category: 'email', free: true },
-        { id: 'emailchecker', name: 'Email-checker.net', url: 'https://email-checker.net/', description: 'Verifica si una dirección de correo es válida.', category: 'email', free: true },
-        { id: 'kickbox', name: 'Kickbox', url: 'https://kickbox.com/', description: 'Servicio de verificación de email con API.', category: 'email', free: false },
-        { id: 'holehe', name: 'Holehe (GitHub)', url: 'https://github.com/megadose/holehe', description: 'Comprueba en qué servicios está registrado un email.', category: 'email', free: true },
-        { id: 'ghunt', name: 'GHunt (GitHub)', url: 'https://github.com/mxrch/GHunt', description: 'Extrae información de cuentas de Google/Gmail.', category: 'email', free: true },
-        { id: 'predictasearch', name: 'Predicta Search', url: 'https://predictasearch.com/', description: 'Motor de búsqueda de personas por email.', category: 'email', free: false },
-        { id: 'dehashed', name: 'DeHashed', url: 'https://dehashed.com/', description: 'Buscador de filtraciones con datos detallados.', category: 'email', free: false },
-        { id: 'intelx', name: 'IntelX', url: 'https://intelx.io/', description: 'Motor de búsqueda con datos de filtraciones.', category: 'email', free: true },
-        { id: 'leakcheck', name: 'LeakCheck', url: 'https://leakcheck.io/', description: 'Busca emails en bases de datos filtradas.', category: 'email', free: true },
-        { id: 'google_dork', name: 'Google Dork', url: 'https://www.google.com/', description: 'Busca el email entre comillas en Google.', category: 'email', free: true },
-        { id: 'spokeo', name: 'Spokeo', url: 'https://www.spokeo.com/', description: 'Buscador de personas por email o teléfono.', category: 'email', free: false },
-        { id: 'thatsthem', name: 'That\'sThem', url: 'https://thatsthem.com/', description: 'Información pública asociada a un email.', category: 'email', free: true },
-        { id: 'whois', name: 'Whois', url: 'https://who.is/', description: 'Datos de registro de un dominio.', category: 'email', free: true },
-        { id: 'viewdns', name: 'ViewDNS', url: 'https://viewdns.info/', description: 'Herramientas DNS: reverse IP, historial, whois.', category: 'email', free: true },
-        { id: 'securitytrails', name: 'SecurityTrails', url: 'https://securitytrails.com/', description: 'Datos históricos de DNS y subdominios.', category: 'email', free: true },
-        { id: 'hunter', name: 'Hunter.io', url: 'https://hunter.io/', description: 'Encuentra todos los emails de un dominio.', category: 'email', free: false },
-        { id: 'haveibeenpwned', name: 'Have I Been Pwned', url: 'https://haveibeenpwned.com/', description: 'Verifica si un correo ha sido comprometido en brechas de datos.', category: 'email', free: true },
-        { id: 'epieos', name: 'Epieos', url: 'https://epieos.com/', description: 'Busca cuentas de Google asociadas al correo y reseñas en Maps.', category: 'email', free: true },
-        { id: 'whatsmyname', name: 'WhatsMyName', url: 'https://whatsmyname.app/', description: 'Busca nombres de usuario en cientos de sitios web.', category: 'email', free: true }
+        { id: 'emailhippo', name: 'EmailHippo', url: 'https://tools.emailhippo.com/', description: 'Verificación exhaustiva de direcciones de email (existencia y catch-all).', usage: 'Introduce el correo para ver si el servidor de recepción existe.', category: 'email', free: true },
+        { id: 'emailchecker', name: 'Email-checker.net', url: 'https://email-checker.net/', description: 'Verificación rápida por SMTP de la dirección de correo.', usage: 'Ideal para descartar emails falsos de manera inmediata.', category: 'email', free: true },
+        { id: 'kickbox', name: 'Kickbox', url: 'https://kickbox.com/', description: 'Servicio avanzado de comprobación de reputación de email.', usage: 'API de validación para entornos de producción.', category: 'email', free: false },
+        { id: 'holehe', name: 'Holehe (GitHub)', url: 'https://github.com/megadose/holehe', description: 'Comprueba en qué servicios (Twitter, Github, etc) está registrado un email.', usage: 'Identifica cuentas sociales usando la recuperación de contraseña sin alertar.', category: 'email', free: true },
+        { id: 'ghunt', name: 'GHunt (GitHub)', url: 'https://github.com/mxrch/GHunt', description: 'Framework OSINT especializado para perfiles de Google y Gmail.', usage: 'Extrae nombres, reseñas, modelo de teléfono y servicios vinculados al Gmail.', category: 'email', free: true },
+        { id: 'dehashed', name: 'DeHashed', url: 'https://dehashed.com/', description: 'Motor de búsqueda forense de hashes y filtraciones.', usage: 'Introduce el email para ver en qué brechas de datos de terceros aparece.', category: 'email', free: false },
+        { id: 'intelx_email', name: 'IntelX', url: 'https://intelx.io/', description: 'Poderoso motor de búsqueda con acceso profundo a datos de filtraciones web.', usage: 'Búsqueda de texto libre de direcciones email en repositorios subterráneos.', category: 'email', free: true },
+        { id: 'leakcheck', name: 'LeakCheck', url: 'https://leakcheck.io/', description: 'Busca cruces de emails en las bases de datos previamente expuestas.', usage: 'Comprueba fugas y si las contraseñas asociadas están comprometidas.', category: 'email', free: true },
+        { id: 'haveibeenpwned', name: 'Have I Been Pwned', url: 'https://haveibeenpwned.com/', description: 'Base de datos pública para verificar exposición de correos.', usage: 'El estándar de la industria para auditorías de compromisos.', category: 'email', free: true },
+        { id: 'epieos', name: 'Epieos', url: 'https://epieos.com/', description: 'Versión web para encontrar servicios y cuentas vinculadas, focus especial en Google.', usage: 'Encuentra servicios y reseñas del objetivo en Google Maps.', category: 'email', free: true },
+        { id: 'whatsmyname_email', name: 'WhatsMyName', url: 'https://whatsmyname.app/', description: 'Verificador de presencia online multifuente.', usage: 'Usa la primera parte del email para descubrir perfiles en +500 webs.', category: 'email', free: true },
+        { id: 'hunter', name: 'Hunter.io', url: 'https://hunter.io/', description: 'Mapea la estructura de correos de un dominio corporativo.', usage: 'Ideal para encontrar el formato de email (ej: nombre.apellido@empresa.com).', category: 'email', free: false }
     ],
     flows: [
         {
@@ -32,33 +25,21 @@ export const email = {
             steps: [
                 {
                     step_id: 1,
-                    title: 'Verificar Existencia',
-                    description: 'Confirma si la dirección de correo es válida y real.',
-                    tools: ['hunter', 'emailhippo', 'emailchecker', 'kickbox']
+                    title: 'Verificar Existencia y Formato',
+                    description: 'Confirma si la dirección de correo es válida, real y cuál es el formato corporativo.',
+                    tools: ['emailhippo', 'emailchecker', 'kickbox', 'hunter']
                 },
                 {
                     step_id: 2,
-                    title: 'Cuentas Vinculadas',
-                    description: 'Descubre en qué servicios está registrado el email.',
-                    tools: ['holehe', 'epieos', 'whatsmyname', 'ghunt', 'predictasearch']
+                    title: 'Perfiles e Identidades Vinculadas',
+                    description: 'Descubre en qué plataformas está registrado el correo e investiga su perfil de Google.',
+                    tools: ['holehe', 'epieos', 'whatsmyname_email', 'ghunt']
                 },
                 {
                     step_id: 3,
-                    title: 'Filtraciones de Datos',
-                    description: 'Busca el email en bases de datos hackeadas.',
-                    tools: ['haveibeenpwned', 'dehashed', 'intelx', 'leakcheck']
-                },
-                {
-                    step_id: 4,
-                    title: 'Presencia Online',
-                    description: 'Búsqueda en redes sociales y motores de búsqueda.',
-                    tools: ['google_dork', 'epieos', 'spokeo', 'thatsthem']
-                },
-                {
-                    step_id: 5,
-                    title: 'Investigación de Dominio',
-                    description: 'Analiza el dominio del correo si es corporativo o propio.',
-                    tools: ['hunter', 'whois', 'viewdns', 'securitytrails']
+                    title: 'Búsqueda en Filtraciones (Breach Data)',
+                    description: 'Localiza si la dirección aparece expuesta en grandes volcados de bases de datos.',
+                    tools: ['haveibeenpwned', 'dehashed', 'intelx_email', 'leakcheck']
                 }
             ]
         }

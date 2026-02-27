@@ -8,7 +8,6 @@ import {
     ExternalLink,
     HelpCircle
 } from 'lucide-react';
-import { dataModel } from '../data/data_model';
 import { social } from '../data/categories/social';
 import { physical } from '../data/categories/physical';
 import { factcheck } from '../data/categories/factcheck';
@@ -19,7 +18,7 @@ import { phone } from '../data/categories/phone';
 import { username } from '../data/categories/username';
 
 // Combine all tools to search full DB
-const allCategories = [social, physical, factcheck, ip_domain, opsec, email, phone, username, dataModel];
+const allCategories = [social, physical, factcheck, ip_domain, opsec, email, phone, username];
 const allTools = allCategories.flatMap(cat => cat.tools || []);
 
 export default function VerificationGuidePage() {

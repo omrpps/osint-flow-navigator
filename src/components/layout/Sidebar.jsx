@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Search, Zap, FolderOpen, Settings, Shield, CheckCircle, UserCheck } from 'lucide-react';
+import { LayoutDashboard, Search, Zap, FolderOpen, Settings, Shield, CheckCircle, UserCheck, Archive } from 'lucide-react';
 import { cn } from '../../lib/utils';
 
 const navItems = [
@@ -8,6 +8,7 @@ const navItems = [
     { icon: Search, label: 'Herramientas', to: '/tools' },
     { icon: CheckCircle, label: 'Asistente Check', to: '/verification-guide' },
     { icon: UserCheck, label: 'Asistente OPSEC', to: '/opsec-guide' },
+    { icon: Archive, label: 'Evidencias', to: '/evidence' },
     { icon: Shield, label: 'Security in a Box', to: '/security' },
 ];
 
