@@ -26,7 +26,8 @@ export const factcheck = {
 
         // Metadata
         { id: 'metadata2go', name: 'Metadata2Go', url: 'https://www.metadata2go.com/', description: 'Visor y editor de metadatos online.', usage: 'Sube el archivo original (no de WhatsApp/redes).', category: 'factcheck', free: true },
-        { id: 'exiftool', name: 'ExifTool', url: 'https://exiftool.org/', description: 'La herramienta más potente para metadatos (CLI).', usage: 'Comando: exiftool imagen.jpg', category: 'factcheck', free: true },
+        { id: 'exiftool', name: 'ExifTool', url: 'https://exiftool.org/', description: 'La herramienta más potente para metadatos (CLI).', usage: 'Comando: exiftool imagen.jpg', category: 'factcheck', payment_tier: 'free' },
+        { id: 'findexif', name: 'FindExif.com', url: 'https://findexif.com/', description: 'Comprueba el origen de fotos por metadatos EXIF.', usage: 'Sube imagen o usa URL para GPS y fechas.', category: 'factcheck', payment_tier: 'free' },
 
         // Preservation / Archiving
         { id: 'archive_today', name: 'Archive.today', url: 'https://archive.today/', description: 'Guarda una copia exacta de una web.', usage: 'Eterniza la evidencia antes de que la borren.', category: 'factcheck', free: true },
@@ -35,6 +36,13 @@ export const factcheck = {
         { id: 'singlefile', name: 'SingleFile (Extension)', url: 'https://github.com/gildas-lormeau/SingleFile', description: 'Guarda una página completa como un solo archivo HTML.', usage: 'Ideal para guardar evidencia localmente con alta fidelidad.', category: 'factcheck', free: true },
 
         // Preservación cubierta en la tab principal
+
+        // Global Factchecking
+        { id: 'snopes', name: 'Snopes', url: 'https://www.snopes.com/', description: 'Referente global en desmentir leyendas y fake news.', usage: 'Busca mitos o noticias virales.', category: 'factcheck', payment_tier: 'free', opsec_level: 'Safe (Investigación)' },
+        { id: 'politifact', name: 'PolitiFact', url: 'https://www.politifact.com/', description: 'Califica afirmaciones políticas estilo Truth-O-Meter.', usage: 'Verificación política EE.UU.', category: 'factcheck', payment_tier: 'free', opsec_level: 'Safe (Investigación)' },
+        { id: 'factcheck_org', name: 'FactCheck.org', url: 'https://www.factcheck.org/', description: 'Proyecto de Annenberg de comprobación factual.', usage: 'Filtra declaraciones de EE.UU.', category: 'factcheck', payment_tier: 'free', opsec_level: 'Safe (Investigación)' },
+        { id: 'google_factcheck', name: 'Google Fact Check Tools', url: 'https://toolbox.google.com/factcheck/explorer', description: 'Buscador de verificaciones de hechos por editores IFCN.', usage: 'Escribe la noticia y mira quién la ha verificado.', category: 'factcheck', payment_tier: 'free', opsec_level: 'Safe (Investigación)' },
+        { id: 'duke_reporters', name: "Duke Reporters' Lab", url: 'https://reporterslab.org/fact-checking/', description: 'Base de datos mundial de sitios fact-checkers.', usage: 'Filtra por país/región en el mapamundi.', category: 'factcheck', payment_tier: 'free', opsec_level: 'Safe (Investigación)' }
     ],
     flows: [
         {
@@ -45,8 +53,8 @@ export const factcheck = {
                 {
                     step_id: 1,
                     title: 'Consulta a Verificadores',
-                    description: 'Busca si el bulo ya ha sido desmentido en España.',
-                    tools: ['maldita', 'newtral', 'verificat', 'efeverifica']
+                    description: 'Busca si el bulo ya ha sido desmentido global o localmente.',
+                    tools: ['google_factcheck', 'maldita', 'newtral', 'verificat', 'efeverifica', 'snopes', 'politifact', 'factcheck_org', 'duke_reporters']
                 },
                 {
                     step_id: 2,
@@ -64,7 +72,7 @@ export const factcheck = {
                     step_id: 4,
                     title: 'Metadatos',
                     description: 'Revisa cuándo y dónde se creó el archivo original.',
-                    tools: ['metadata2go', 'exiftool']
+                    tools: ['metadata2go', 'exiftool', 'findexif']
                 },
                 {
                     step_id: 5,

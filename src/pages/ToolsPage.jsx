@@ -92,9 +92,30 @@ export default function ToolsPage() {
                                         {tool.opsec_level}
                                     </span>
                                 )}
-                                {!tool.free && (
-                                    <span className="bg-blue-500/10 text-blue-600 border border-blue-200 px-2 py-1 rounded-md">
-                                        $ Pago
+                                {tool.payment_tier === 'paid' && (
+                                    <span className="bg-red-500/10 text-red-600 border border-red-200 px-2 py-1 rounded-md font-medium flex items-center gap-1">
+                                        $$ Pago
+                                    </span>
+                                )}
+                                {tool.payment_tier === 'freemium' && (
+                                    <span className="bg-blue-500/10 text-blue-600 border border-blue-200 px-2 py-1 rounded-md font-medium flex items-center gap-1">
+                                        Freemium
+                                    </span>
+                                )}
+                                {tool.payment_tier === 'free' && (
+                                    <span className="bg-green-500/10 text-green-600 border border-green-200 px-2 py-1 rounded-md font-medium flex items-center gap-1">
+                                        Gratis
+                                    </span>
+                                )}
+                                {/* Keep backward compatibility for older entries that only use the boolean free:true/false */}
+                                {!tool.payment_tier && !tool.free && (
+                                    <span className="bg-red-500/10 text-red-600 border border-red-200 px-2 py-1 rounded-md font-medium flex items-center gap-1">
+                                        $$ Pago
+                                    </span>
+                                )}
+                                {!tool.payment_tier && tool.free && (
+                                    <span className="bg-green-500/10 text-green-600 border border-green-200 px-2 py-1 rounded-md font-medium flex items-center gap-1">
+                                        Gratis
                                     </span>
                                 )}
                             </div>
