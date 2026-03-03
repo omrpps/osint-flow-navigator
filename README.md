@@ -19,6 +19,7 @@ La herramienta proporciona una interfaz limpia, profesional y libre de friccione
 - **Catálogo de Herramientas:** Acceso organizado a más de 300 herramientas OSINT curadas y verificadas.
 - **Asistente de Procesamiento:** Un asistente paso a paso para recomendar herramientas según la evidencia tecnológica.
 - **Módulo de Evidencias:** Herramientas recomendadas y flujos de trabajo para la preservación legal y segura de evidencias digitales (Webs, Videos y metadatos).
+- **Inteligencia Artificial:** Asistente Especializado en OSINT y OPSEC (Gemini) integrado para guiar en investigaciones.
 - **Seguridad y OPSEC:** Sección dedicada a tácticas de seguridad operacional para mantener el anonimato y la seguridad durante las investigaciones.
 - **Totalmente Client-Side:** Todo el código se ejecuta en tu navegador. Tus datos e investigaciones nunca salen de tu ordenador.
 
