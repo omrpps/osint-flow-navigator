@@ -4,6 +4,7 @@ export const email = {
     icon: 'Mail',
     description: 'Verificación, fugas y perfiles vinculados',
     tools: [
+        { id: 'emailrep', name: 'EmailRep (Bellingcat)', url: 'https://emailrep.io/', description: 'Comprueba la reputación de un correo electrónico y su actividad reciente.', usage: 'Introduce el email para evaluar su riesgo y ver si es de un dominio descartable, cuántas veces ha estado en filtraciones recientes o si ha sido visto antes de forma fiable.', category: 'email', payment_tier: 'free' },
         { id: 'emailhippo', name: 'EmailHippo', url: 'https://tools.emailhippo.com/', description: 'Verificación exhaustiva de direcciones de email (existencia y catch-all).', usage: 'Introduce el correo para ver si el servidor de recepción existe.', category: 'email', payment_tier: 'freemium' },
         { id: 'emailchecker', name: 'Email-checker.net', url: 'https://email-checker.net/', description: 'Verificación rápida por SMTP de la dirección de correo.', usage: 'Ideal para descartar emails falsos de manera inmediata.', category: 'email', payment_tier: 'free' },
         { id: 'kickbox', name: 'Kickbox', url: 'https://kickbox.com/', description: 'Servicio avanzado de comprobación de reputación de email.', usage: 'API de validación para entornos de producción.', category: 'email', payment_tier: 'paid' },

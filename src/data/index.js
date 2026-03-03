@@ -1,5 +1,6 @@
 import { opsec } from './categories/opsec';
 import { email } from './categories/email';
+import { image_video } from './categories/image_video';
 import { phone } from './categories/phone';
 import { username } from './categories/username';
 import { social } from './categories/social';
@@ -13,6 +14,7 @@ import { darkweb } from './categories/darkweb';
 const allCategories = [
     opsec,
     email,
+    image_video,
     phone,
     username,
     social,
