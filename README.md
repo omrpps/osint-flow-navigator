@@ -1,7 +1,12 @@
 # 🔍 OSINT Flow Navigator
 
-![Demostración de la Aplicación](./demo.webp)
+### 📸 Capturas de Pantalla
 
+| Página Principal | Vista de Categorías |
+|:---:|:---:|
+| <img src="./public/screenshot_home.jpg" alt="Página Principal" width="100%"/> | <img src="./public/screenshot_category_email.jpg" alt="Vista de Categorías" width="100%"/> |
+| **Asistente de Procesamiento** | **Guía de Seguridad (OPSEC)** |
+| <img src="./public/screenshot_assistant.jpg" alt="Asistente de Procesamiento" width="100%"/> | <img src="./public/screenshot_opsec.jpg" alt="Guía OPSEC" width="100%"/> |
 **OSINT Flow Navigator** es una aplicación web interactiva diseñada para asistir a investigadores OSINT (Open-Source Intelligence), periodistas, y analistas de ciberseguridad en sus procesos de investigación. 
 
 La herramienta proporciona una interfaz limpia, profesional y libre de fricciones que guía a los usuarios a través de flujos de trabajo estructurados dependiendo del dato inicial que se posea (Ej: Correo, IP, Teléfono, Username, etc.), pivotando hacia herramientas específicas, sin recolectar ni almacenar información personal en servidores externos.
