@@ -8,7 +8,7 @@ export function cn(...inputs) {
 export const detectInputType = (input) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const ipRegex = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/;
-    const domainRegex = /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/;
+    const domainRegex = /^([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/;
     const phoneRegex = /^\+?[1-9]\d{1,14}$/;
 
     if (emailRegex.test(input)) return "email";

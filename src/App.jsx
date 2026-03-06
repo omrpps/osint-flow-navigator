@@ -7,11 +7,14 @@ import ToolsPage from './pages/ToolsPage';
 
 
 
+import CasesPage from './pages/CasesPage';
+import FlowsPage from './pages/FlowsPage';
 import SettingsPage from './pages/SettingsPage';
 import SecurityInABoxPage from './pages/SecurityInABoxPage';
 import VerificationGuidePage from './pages/VerificationGuidePage';
 import OpsecGuidePage from './pages/OpsecGuidePage';
 import EvidencePage from './pages/EvidencePage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -21,11 +24,14 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="investigation/:flowId" element={<FlowViewer />} />
           <Route path="tools" element={<ToolsPage />} />
+          <Route path="cases" element={<CasesPage />} />
+          <Route path="flows" element={<FlowsPage />} />
           <Route path="security" element={<SecurityInABoxPage />} />
           <Route path="verification-guide" element={<VerificationGuidePage />} />
           <Route path="opsec-guide" element={<OpsecGuidePage />} />
           <Route path="evidence" element={<EvidencePage />} />
           <Route path="settings" element={<SettingsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </Router>

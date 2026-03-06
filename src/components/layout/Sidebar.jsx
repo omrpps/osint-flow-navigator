@@ -21,7 +21,7 @@ export function Sidebar({ className = "hidden md:flex", onNavigate }) {
                     OSINT <span className="text-primary">Navigator</span>
                 </span>
             </div>
-            <nav className="flex-1 space-y-1 p-2">
+            <nav aria-label="Navegación principal" className="flex-1 space-y-1 p-2">
                 {navItems.map((item) => (
                     <NavLink
                         key={item.to}

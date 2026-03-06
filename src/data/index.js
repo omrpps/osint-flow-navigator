@@ -37,4 +37,6 @@ export const dataModel = {
 };
 
 // Log for debugging
-console.log(`[DataModel] Loaded ${dataModel.tools.length} tools and ${dataModel.flows.length} flows.`);
+if (import.meta.env.DEV) {
+    console.log(`[DataModel] Loaded ${dataModel.tools.length} tools and ${dataModel.flows.length} flows.`);
+}

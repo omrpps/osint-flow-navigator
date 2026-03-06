@@ -12,9 +12,14 @@ export default function FlowViewer() {
 
     useEffect(() => {
         if (flowId) {
+            const flowExists = flows.some(f => f.id === flowId);
+            if (!flowExists) {
+                navigate('/404', { replace: true });
+                return;
+            }
             startFlow(flowId);
         }
-    }, [flowId, startFlow]);
+    }, [flowId, startFlow, flows, navigate]);
 
     if (!activeFlow) {
         return (

@@ -10,29 +10,29 @@ import useAppStore from '../stores/useStore';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 
-const quickAccess = [
+const QUICK_ACCESS_CONFIG = [
     // Identity
-    { icon: Mail, label: 'Email', count: 19, color: 'text-blue-500', flowId: 'flow_email_master', desc: 'Verificar & Fugas' },
-    { icon: Smartphone, label: 'Teléfono', count: 14, color: 'text-green-500', flowId: 'flow_phone_master', desc: 'Identificar Propietario' },
-    { icon: User, label: 'Username', count: 9, color: 'text-purple-500', flowId: 'flow_username_master', desc: 'Rastreo Social' },
+    { icon: Mail, label: 'Email', categoryId: 'email', color: 'text-blue-500', flowId: 'flow_email_master', desc: 'Verificar & Fugas' },
+    { icon: Smartphone, label: 'Teléfono', categoryId: 'phone', color: 'text-green-500', flowId: 'flow_phone_master', desc: 'Identificar Propietario' },
+    { icon: User, label: 'Username', categoryId: 'username', color: 'text-purple-500', flowId: 'flow_username_master', desc: 'Rastreo Social' },
 
     // Infrastructure
-    { icon: Globe, label: 'IP / Dominio', count: 10, color: 'text-cyan-500', flowId: 'flow_ip_domain', desc: 'Whois & DNS' },
+    { icon: Globe, label: 'IP / Dominio', categoryId: 'ip_domain', color: 'text-cyan-500', flowId: 'flow_ip_domain', desc: 'Whois & DNS' },
 
     // Social Specific
-    { icon: Ghost, label: 'Telegram', count: 5, color: 'text-blue-400', flowId: 'flow_telegram', desc: 'Canales & Usuarios' },
-    { icon: Image, label: 'Instagram', count: 6, color: 'text-pink-500', flowId: 'flow_instagram', desc: 'Perfiles & Ubicación' },
-    { icon: Users, label: 'X (Twitter)', count: 5, color: 'text-sky-500', flowId: 'flow_twitter', desc: 'Tweets & Bots' },
+    { icon: Ghost, label: 'Telegram', categoryId: 'social', color: 'text-blue-400', flowId: 'flow_telegram', desc: 'Canales & Usuarios' },
+    { icon: Image, label: 'Instagram', categoryId: 'social', color: 'text-pink-500', flowId: 'flow_instagram', desc: 'Perfiles & Ubicación' },
+    { icon: Users, label: 'X (Twitter)', categoryId: 'social', color: 'text-sky-500', flowId: 'flow_twitter', desc: 'Tweets & Bots' },
 
     // Assets & Physical
-    { icon: Bitcoin, label: 'Cripto', count: 5, color: 'text-yellow-500', flowId: 'flow_crypto', desc: 'Rastreo Blockchain' },
-    { icon: Building, label: 'Empresas', count: 3, color: 'text-orange-500', flowId: 'flow_business', desc: 'Registros Oficiales' },
-    { icon: Plane, label: 'Transporte', count: 4, color: 'text-indigo-500', flowId: 'flow_transport', desc: 'Vuelos & Barcos' },
-    { icon: MapPin, label: 'Geolocalización', count: 5, color: 'text-green-500', flowId: 'flow_geolocation', desc: 'Mapas & Sombras' },
-    { icon: Image, label: 'Imágenes', count: 6, color: 'text-rose-500', flowId: 'flow_images', desc: 'Búsqueda Inversa' },
+    { icon: Bitcoin, label: 'Cripto', categoryId: 'assets', color: 'text-yellow-500', flowId: 'flow_crypto', desc: 'Rastreo Blockchain' },
+    { icon: Building, label: 'Empresas', categoryId: 'physical', color: 'text-orange-500', flowId: 'flow_business', desc: 'Registros Oficiales' },
+    { icon: Plane, label: 'Transporte', categoryId: 'physical', color: 'text-indigo-500', flowId: 'flow_transport', desc: 'Vuelos & Barcos' },
+    { icon: MapPin, label: 'Geolocalización', categoryId: 'physical', color: 'text-green-500', flowId: 'flow_geolocation', desc: 'Mapas & Sombras' },
+    { icon: Image, label: 'Imágenes', categoryId: 'image_video', color: 'text-rose-500', flowId: 'flow_images', desc: 'Búsqueda Inversa' },
 
     // Security
-    { icon: Shield, label: 'OPSEC', count: 23, color: 'text-red-500', flowId: 'flow_opsec', desc: 'Entorno Seguro' },
+    { icon: Shield, label: 'OPSEC', categoryId: 'opsec', color: 'text-red-500', flowId: 'flow_opsec', desc: 'Entorno Seguro' },
 ];
 
 export default function Dashboard() {
@@ -40,12 +40,25 @@ export default function Dashboard() {
     const navigate = useNavigate();
     const [inputValue, setInputValue] = useState('');
     const [stats, setStats] = useState({ tools: 0, flows: 0 });
+    const [quickAccess, setQuickAccess] = useState(QUICK_ACCESS_CONFIG);
 
     useEffect(() => {
+        const currentTools = useAppStore.getState().tools || [];
         setStats({
-            tools: useAppStore.getState().tools?.length || 0,
+            tools: currentTools.length,
             flows: useAppStore.getState().flows?.length || 0
         });
+
+        // Calculate dynamic counts for each category
+        const updatedQuickAccess = QUICK_ACCESS_CONFIG.map(item => {
+            // Some flowIds map directly to categories, others are specific flows.
+            // A more generalized way is counting tools in the category
+            const count = currentTools.filter(t => t.category === item.categoryId).length;
+            // Provide a fallback if category mapping is imperfect
+            return { ...item, count: count > 0 ? count : 5 };
+        });
+
+        setQuickAccess(updatedQuickAccess);
     }, []);
 
     const handleAnalyze = () => {
@@ -121,6 +134,7 @@ export default function Dashboard() {
                         <div className="relative flex-1 w-full">
                             <Search className="absolute left-3 top-3.5 h-5 w-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
                             <Input
+                                aria-label="Buscar vector de ataque u objetivo"
                                 placeholder="Ej: target@email.com, +34600..., 192.168.1.1, 0xWallet..."
                                 className="pl-10 h-14 text-lg shadow-lg border-muted-foreground/20 focus-visible:ring-primary/50 w-full"
                                 value={inputValue}
@@ -128,7 +142,7 @@ export default function Dashboard() {
                                 onKeyDown={handleKeyPress}
                             />
                         </div>
-                        <Button size="lg" className="h-14 w-full sm:w-auto px-8 shadow-lg text-lg font-semibold" onClick={handleAnalyze}>
+                        <Button size="lg" aria-label="Ejecutar análisis del dato ingresado" className="h-14 w-full sm:w-auto px-8 shadow-lg text-lg font-semibold" onClick={handleAnalyze}>
                             Analizar <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
                     </div>
@@ -152,8 +166,11 @@ export default function Dashboard() {
                     {quickAccess.map((item) => (
                         <Card
                             key={item.label}
+                            role="button"
+                            tabIndex={0}
                             className="group hover:bg-accent/50 transition-all cursor-pointer border-muted/40 shadow-sm hover:shadow-md hover:border-primary/50"
                             onClick={() => handleCardClick(item)}
+                            onKeyDown={(e) => e.key === 'Enter' && handleCardClick(item)}
                         >
                             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                                 <CardTitle className="text-sm font-medium group-hover:text-primary transition-colors">
