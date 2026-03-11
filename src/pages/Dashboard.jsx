@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../co
 import {
     Mail, Smartphone, User, Globe, Image, Users, Building,
     Bitcoin, Shield, FileText, Search, ArrowRight, Plane,
-    Ship, Lock, Eye, Ghost, MapPin
+    Ship, Lock, Eye, Ghost, MapPin, BookOpen
 } from 'lucide-react';
 import useAppStore from '../stores/useStore';
 import { Button } from '../components/ui/button';
@@ -30,6 +30,9 @@ const QUICK_ACCESS_CONFIG = [
     { icon: Plane, label: 'Transporte', categoryId: 'physical', color: 'text-indigo-500', flowId: 'flow_transport', desc: 'Vuelos & Barcos' },
     { icon: MapPin, label: 'Geolocalización', categoryId: 'physical', color: 'text-green-500', flowId: 'flow_geolocation', desc: 'Mapas & Sombras' },
     { icon: Image, label: 'Imágenes', categoryId: 'image_video', color: 'text-rose-500', flowId: 'flow_images', desc: 'Búsqueda Inversa' },
+
+    // Training & Resources
+    { icon: BookOpen, label: 'Formación', categoryId: 'training', color: 'text-emerald-500', flowId: 'flow_training', desc: 'Casos Reales & Guías' },
 
     // Security
     { icon: Shield, label: 'OPSEC', categoryId: 'opsec', color: 'text-red-500', flowId: 'flow_opsec', desc: 'Entorno Seguro' },

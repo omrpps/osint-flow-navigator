@@ -9,6 +9,7 @@ import { physical } from './categories/physical';
 import { assets } from './categories/assets';
 import { factcheck } from './categories/factcheck';
 import { darkweb } from './categories/darkweb';
+import { training } from './categories/training';
 
 // Aggregate all tools and flows
 const allCategories = [
@@ -22,7 +23,8 @@ const allCategories = [
     physical,
     assets,
     factcheck,
-    darkweb
+    darkweb,
+    training
 ];
 
 export const dataModel = {

@@ -4,13 +4,13 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Button } from '../components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import useAppStore from '../stores/useStore';
-import { Mail, Smartphone, User, Globe, Image, Users, Building, Bitcoin, Shield, Phone, ArrowRight, Plane, Ship, Map } from 'lucide-react';
+import { Mail, Smartphone, User, Globe, Image, Users, Building, Bitcoin, Shield, Phone, ArrowRight, Plane, Ship, Map, BookOpen } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { Badge } from '../components/ui/badge';
 
 // Helper to map icon names to components
 const IconMap = {
-    Mail, Smartphone, Phone, User, Globe, Image, Users, Building, Bitcoin, Shield, Plane, Ship, Map
+    Mail, Smartphone, Phone, User, Globe, Image, Users, Building, Bitcoin, Shield, Plane, Ship, Map, BookOpen
 };
 
 export default function FlowsPage() {
