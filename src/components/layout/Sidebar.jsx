@@ -1,11 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Search, Zap, FolderOpen, Settings, Shield, CheckCircle, UserCheck, Archive } from 'lucide-react';
+import { LayoutDashboard, Search, Zap, FolderOpen, Settings, Shield, CheckCircle, UserCheck, Archive, BookOpen } from 'lucide-react';
 import { cn } from '../../lib/utils';
 
 const navItems = [
     { icon: LayoutDashboard, label: 'Dashboard', to: '/' },
     { icon: Search, label: 'Herramientas', to: '/tools' },
+    { icon: BookOpen, label: 'Casos de Estudio', to: '/investigation/flow_training' },
+    { icon: FolderOpen, label: 'Casos Guardados', to: '/cases' },
+    { icon: Zap, label: 'Flujos', to: '/flows' },
     { icon: CheckCircle, label: 'Asistente Check', to: '/verification-guide' },
     { icon: UserCheck, label: 'Asistente OPSEC', to: '/opsec-guide' },
     { icon: Archive, label: 'Evidencias', to: '/evidence' },

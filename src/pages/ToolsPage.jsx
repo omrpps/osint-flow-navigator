@@ -63,8 +63,8 @@ export default function ToolsPage() {
 
             {/* Tools Grid */}
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {filteredTools.map(tool => (
-                    <Card key={tool.id} className="flex flex-col h-full hover:shadow-md transition-shadow">
+                {filteredTools.map((tool, index) => (
+                    <Card key={`${tool.id}-${tool.category}-${index}`} className="flex flex-col h-full hover:shadow-md transition-shadow">
                         <CardHeader>
                             <div className="flex justify-between items-start">
                                 <CardTitle className="text-lg">{tool.name}</CardTitle>
