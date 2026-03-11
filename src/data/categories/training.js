@@ -4,7 +4,7 @@ export const training = {
     icon: 'GraduationCap', // Also uses BookOpen depending on icon set. Ensure GraduationCap is supported. Let's use 'BookOpen' to be safer.
     description: 'Recursos formativos, casos reales y metodologías',
     tools: [
-        { id: 'osint_industries_cases', name: 'OSINT Industries – Case Studies', url: 'https://osintindustries.com/blog', description: 'Casos completos con metodología y outcome (Nivel de detalle en resolución: Alto). Idioma: Inglés.', category: 'training', free: true },
+        { id: 'osint_industries_cases', name: 'OSINT Industries – Case Studies', url: 'https://osint.industries/', description: 'Casos completos con metodología y outcome (Nivel de detalle en resolución: Alto). Idioma: Inglés.', category: 'training', free: true },
         { id: 'syk_research_cases', name: 'SYK Research Labs – Case Studies', url: 'https://www.sykresearch.com/', description: 'Historias de investigación OSINT criminal (Nivel de detalle en resolución: Alto). Idioma: Inglés.', category: 'training', free: true },
         { id: 'linkedin_osint_cases', name: 'LinkedIn – Successful OSINT Investigations', url: 'https://www.linkedin.com/search/results/all/?keywords=Successful%20OSINT%20Investigations', description: 'Ejemplos resumidos de investigaciones (Nivel de detalle en resolución: Medio). Idioma: Inglés.', category: 'training', free: true },
         { id: 'altia_intel_cases', name: 'Altia Intel – Investigation Examples', url: 'https://altiaintel.com/', description: 'Casos de uso corporativos / gobierno (Nivel de detalle en resolución: Medio). Idioma: Inglés.', category: 'training', free: true },
